@@ -1,0 +1,40 @@
+### Task 3: Break and Continue Usage
+#### Code Examples
+Here are some code examples in JavaScript that demonstrate the use of `break` and `continue` statements in loops.
+
+*Using Break to Exit a Loop*
+// Example: Stop at the first prime number found
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+let num = 1;
+while (true) {
+    if (isPrime(num)) {
+        console.log(`First prime number found: ${num}`);
+        break;
+    }
+    num++;
+}
+*Using Continue to Skip Iterations*
+// Example: Print only odd numbers between 1 and 20
+for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) {
+        continue;
+    }
+    console.log(i);
+}
+#### Explanation
+1. *Break Statement*: The `break` statement is used to exit a loop prematurely. In the first example, we iterate through numbers starting from 1 and check if each number is prime. As soon as we find the first prime number, we log it to the console and break out of the loop.
+
+2. *Continue Statement*: The `continue` statement is used to skip the current iteration of a loop and move on to the next one. In the second example, we loop through numbers from 1 to 20. If a number is even, we skip it using `continue`, and if it's odd, we print it to the console.
+
+#### Observing Loop Flow
+- *Break*: When `break` is encountered, the loop terminates immediately, and the control is passed to the statement following the loop.
+- *Continue*: When `continue` is encountered, the current iteration is skipped, and the loop proceeds with the next iteration.
+
+These examples illustrate how `break` and `continue` can be used to control the flow of loops in JavaScript, making your code more efficient and flexible.
